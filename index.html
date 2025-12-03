@@ -28,7 +28,8 @@
                 <li><a href="#historia">Historia</a></li>
                 <li><a href="#diferencia">Por qué elegirnos</a></li>
                 <li><a href="#testimonios">Testimonios</a></li>
-                <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+                <li><a href="#contacto" class="btn-nav">Hacer Pedido</a></li>
+                <li><a href="#" id="cart-icon" style="font-size: 1.2rem;">🛒 <span id="cart-count">0</span></a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -69,9 +70,14 @@
                 <div class="product-card fade-in-up">
                     <div class="product-image">
                         <img src="assets/torta_cumpleanos.jpg" alt="Torta personalizada de cumpleaños">
+                        <button class="btn-overlay add-to-cart" data-name="Torta personalizada de cumpleaños"
+                            data-price="45">
+                            🛒 Agregar
+                        </button>
                     </div>
                     <div class="product-info">
                         <h3>Torta personalizada de cumpleaños</h3>
+                        <p class="price">S/ 45.00</p>
                     </div>
                 </div>
 
@@ -79,9 +85,13 @@
                 <div class="product-card fade-in-up delay-100">
                     <div class="product-image">
                         <img src="assets/torta_bodas.jpg" alt="Torta para bodas">
+                        <button class="btn-overlay add-to-cart" data-name="Torta para bodas" data-price="50">
+                            🛒 Agregar
+                        </button>
                     </div>
                     <div class="product-info">
                         <h3>Torta para bodas</h3>
+                        <p class="price">S/ 50.00</p>
                     </div>
                 </div>
 
@@ -89,9 +99,13 @@
                 <div class="product-card fade-in-up delay-200">
                     <div class="product-image">
                         <img src="assets/queque_naranja.jpg" alt="Queque de naranja">
+                        <button class="btn-overlay add-to-cart" data-name="Queque de naranja" data-price="30">
+                            🛒 Agregar
+                        </button>
                     </div>
                     <div class="product-info">
                         <h3>Queque de naranja</h3>
+                        <p class="price">S/ 30.00</p>
                     </div>
                 </div>
 
@@ -99,9 +113,69 @@
                 <div class="product-card fade-in-up delay-300">
                     <div class="product-image">
                         <img src="assets/queque_coco.jpg" alt="Queque de coco rallado">
+                        <button class="btn-overlay add-to-cart" data-name="Queque de coco rallado" data-price="35">
+                            🛒 Agregar
+                        </button>
                     </div>
                     <div class="product-info">
                         <h3>Queque de coco rallado</h3>
+                        <p class="price">S/ 35.00</p>
+                    </div>
+                </div>
+
+                <!-- New Product 5 -->
+                <div class="product-card fade-in-up delay-400">
+                    <div class="product-image">
+                        <img src="assets/torta_lucuma.jpg" alt="Torta de Lúcuma">
+                        <button class="btn-overlay add-to-cart" data-name="Torta de Lúcuma" data-price="40">
+                            🛒 Agregar
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Torta de Lúcuma</h3>
+                        <p class="price">S/ 40.00</p>
+                    </div>
+                </div>
+
+                <!-- New Product 6 -->
+                <div class="product-card fade-in-up delay-500">
+                    <div class="product-image">
+                        <img src="assets/torta_maracuya.jpg" alt="Torta de Maracuyá">
+                        <button class="btn-overlay add-to-cart" data-name="Torta de Maracuyá" data-price="38">
+                            🛒 Agregar
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Torta de Maracuyá</h3>
+                        <p class="price">S/ 38.00</p>
+                    </div>
+                </div>
+
+                <!-- New Product 7 -->
+                <div class="product-card fade-in-up delay-600">
+                    <div class="product-image">
+                        <img src="assets/torta_chocolate.jpg" alt="Torta de Chocolate">
+                        <button class="btn-overlay add-to-cart" data-name="Torta de Chocolate" data-price="42">
+                            🛒 Agregar
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Torta de Chocolate</h3>
+                        <p class="price">S/ 42.00</p>
+                    </div>
+                </div>
+
+                <!-- New Product 8 -->
+                <div class="product-card fade-in-up delay-700">
+                    <div class="product-image">
+                        <img src="assets/cheesecake_fresa.jpg" alt="Cheesecake de Fresa">
+                        <button class="btn-overlay add-to-cart" data-name="Cheesecake de Fresa" data-price="48">
+                            🛒 Agregar
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Cheesecake de Fresa</h3>
+                        <p class="price">S/ 48.00</p>
                     </div>
                 </div>
             </div>
@@ -122,9 +196,9 @@
                         con un acabado moderno y profesional.</p>
                 </div>
                 <div class="about-decorative fade-in-up delay-200">
-                    <div class="decorative-circle">
-                        <img src="assets/historia.jpg" alt="Nuestra Historia"
-                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                    <div class="decorative-square">
+                        <img src="assets/story_new.png" alt="Nuestra Historia"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
                     </div>
                 </div>
             </div>
@@ -192,7 +266,7 @@
             <h2 class="section-title text-white">¿Listo para hacer tu pedido?</h2>
             <p class="text-white mb-2">Cuéntanos qué diseño tienes en mente y haremos una creación única para tu
                 celebración.</p>
-            <a href="https://wa.link/tbdv8t" class="btn btn-primary btn-lg" target="_blank">Encargar mi torta ahora</a>
+            <a href="https://wa.link/tbdv8t" class="btn btn-primary btn-lg" target="_blank">Hacer Pedido</a>
         </div>
     </section>
 
@@ -212,10 +286,6 @@
                 <div class="footer-contact">
                     <h4>Contacto</h4>
                     <p>Dirección: Calle Paso de los Andes 656, Pueblo Libre</p>
-                    <div class="social-links">
-                        <a href="#" class="social-icon">IG</a>
-                        <a href="#" class="social-icon">FB</a>
-                    </div>
                 </div>
             </div>
             <div class="footer-bottom text-center">
@@ -223,6 +293,30 @@
             </div>
         </div>
     </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Tu Carrito</h2>
+                <span class="close-cart">&times;</span>
+            </div>
+            <div class="cart-items">
+                <!-- Items will be added here dynamically -->
+                <p class="empty-cart-msg">Tu carrito está vacío.</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <h3>Total: <span id="cart-total-price">S/ 0.00</span></h3>
+                </div>
+                <a href="#" id="checkout-btn" class="btn btn-primary btn-block">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+                        style="width: 20px; display: inline-block; vertical-align: middle; margin-right: 5px;">
+                    Hacer Pedido por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
