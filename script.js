@@ -14,20 +14,20 @@ const addToCartButtons = document.querySelectorAll('.add-to-cart');
 // Open cart modal
 cartIcon.addEventListener('click', (e) => {
     e.preventDefault();
-    cartModal.classList.add('active');
+    cartModal.classList.add('show');
     document.body.style.overflow = 'hidden'; // Lock scroll
 });
 
 // Close cart modal
 closeCart.addEventListener('click', () => {
-    cartModal.classList.remove('active');
+    cartModal.classList.remove('show');
     document.body.style.overflow = ''; // Unlock scroll
 });
 
 // Close cart when clicking outside
 cartModal.addEventListener('click', (e) => {
     if (e.target === cartModal) {
-        cartModal.classList.remove('active');
+        cartModal.classList.remove('show');
         document.body.style.overflow = ''; // Unlock scroll
     }
 });
@@ -52,7 +52,7 @@ addToCartButtons.forEach(button => {
         }
 
         updateCart();
-        
+
         // Visual feedback
         button.textContent = '✓ Agregado';
         setTimeout(() => {
@@ -122,7 +122,7 @@ function removeItem(productName) {
 // Checkout via WhatsApp
 checkoutBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    
+
     if (cart.length === 0) {
         alert('Tu carrito está vacío');
         return;
@@ -130,20 +130,20 @@ checkoutBtn.addEventListener('click', (e) => {
 
     // Create WhatsApp message
     let message = '¡Hola! Me gustaría hacer el siguiente pedido:\n\n';
-    
+
     cart.forEach(item => {
         message += `• ${item.name} x${item.quantity} - S/ ${(item.price * item.quantity).toFixed(2)}\n`;
     });
-    
+
     const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     message += `\n*Total: S/ ${totalPrice.toFixed(2)}*`;
 
     // Encode message for URL
     const encodedMessage = encodeURIComponent(message);
-    
+
     // WhatsApp link
     const whatsappLink = `https://wa.link/tbdv8t?text=${encodedMessage}`;
-    
+
     // Open WhatsApp
     window.open(whatsappLink, '_blank');
 });
@@ -152,15 +152,15 @@ checkoutBtn.addEventListener('click', (e) => {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
-        
+
         // Skip cart icon and checkout button
         if (href === '#' || this.id === 'cart-icon' || this.id === 'checkout-btn') {
             return;
         }
-        
+
         e.preventDefault();
         const target = document.querySelector(href);
-        
+
         if (target) {
             target.scrollIntoView({
                 behavior: 'smooth',
